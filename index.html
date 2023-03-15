@@ -40,7 +40,7 @@
 
 <h1><u>MY PHOTOS</u></h1>
 <br/>
-<div class="wrapper">
+<center><div class="wrapper">
   <div class="news-item hero-item">
   </div>
   <div class="news-item standard-item">
@@ -49,7 +49,7 @@
   </div>
   <div class="news-item standard-item">
   </div>
-</div>
+</div></center>
  
 <br/>
 </section>
@@ -60,15 +60,17 @@
 <h1><u>MY FAVOURITE YOUTUBE VIDEOS</u></h1>
 <br/>
 <br/>
-<iframe width="420" height="315"
+<center><iframe width="420" height="315"
 src="https://www.youtube.com/embed/IZ7F6ELO-hQ">
-</iframe>
-<iframe width="420" height="315"
+</iframe></center>
+<br/>
+<center><iframe width="420" height="315"
 src="https://www.youtube.com/embed/O5BJVO3PDeQ">
-</iframe>
-<iframe width="420" height="315"
+</iframe></center>
+<br/>
+<center><iframe width="420" height="315"
 src="https://www.youtube.com/embed/xbs7FT7dXYc">
-</iframe>
+</iframe></center>
 <br/>
 </section>
 
@@ -81,9 +83,9 @@ src="https://www.youtube.com/embed/xbs7FT7dXYc">
 <br/>
 <b>And in case whoever reads this STILL wants a regular Like button, as was asked:</b>
 <br/>
-<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpainharold&width=450&layout&action&size&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+<center><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fpainharold&width=450&layout&action&size&share=true&height=35&appId" width="450" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></center>
 <br/>
-<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=50&layout&action&size&share=false&height=35&appId" width="50" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe>
+<center><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&width=50&layout&action&size&share=false&height=35&appId" width="50" height="35" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"></iframe></center>
 
 </section>
 
@@ -92,7 +94,7 @@ src="https://www.youtube.com/embed/xbs7FT7dXYc">
 <br/>
 <h1><u>SCAN MY QR CODE, I PROMISE IT'S NOT DANGEROUS</u></h1>
 <br/>
-<img src="QR.png" alt="Harold's Website QR code because he is a genius old man" z-index:-10>
+<center><img src="QR.png" alt="Harold's Website QR code because he is a genius old man" z-index:-10></center>
 
 </section>
 
@@ -127,14 +129,14 @@ Oh my, seems like there is another question!<br/>
 <br/>
 <h1><u>HERE IS MY CONTACT INFORMATION</u></h1>
 <br/>
-<form id="email-form">
+<center><form action="mailto:zasladan@post.bgu.ac.il" method = "post" enctype = "text/plain" id="email-form" style="z-index:2">
   <ul class = "rounded" style="  white-space:nowrap; background-color:rgb(255, 255, 255);">
-      <li style = " color: black">Send To: <input type="text" maxlength="50" placeholder = "Your email here!" name = "adr" id = 'adr' /></li>
+      <li style = " color: black;z-index:1">Send To: <input type="text" maxlength="50" placeholder = "Your email here!" name = "adr" id = 'adr' /></li>
       <br/>
-      <li style = " color: black">Subject: <input type="text" maxlength="50" placeholder = "What'dya wanna talk about?" name = "sbj" id = 'sbj' /></li>
+      <li style = " color: black;z-index:1">Subject: <input type="text" maxlength="50" placeholder = "What's the title?" name = "sbj" id = 'sbj' /></li>
       <br/>
-      <li style = "color: black">Message: <input style="height: 200px; width: 500px;" maxlength="500" type = "text" placeholder = "What would you like to tell me?" name = "msg" id = 'msg' /></li>
-      <li style="color: black">Emoji: 
+      <li style = "color: black;z-index:1">Message: <input style="height: 200px; width: 500px;" maxlength="500" type = "text" placeholder = "What would you like to tell me?" name = "msg" id = 'msg' /></li>
+      <li style="color: black;z-index:1">Emoji: 
         <select id="selectEmoji"> 
           <option value=""></option>
           <option value="😀">😀</option>
@@ -157,18 +159,20 @@ Oh my, seems like there is another question!<br/>
             var sel = document.getElementById("selectEmoji").value;
 			      textarea.value += sel;
           }
+
+          function submitMail(){
+            document.getElementById("email-form").submit();
+          }
           </script>
         <button id = "emoji_btn" type="button" onclick="addEmoToMsg()">Add selected Emoji</button>
         <br/>
-        <button id = "send_btn" type="button" onclick="alert('The mail has been sent! We promise nothing about answers.')">Send email</button>
+        <button id = "send_btn" type="button" onclick="submitMail()">Send email</button>
+        <br/>
 
   </ul>
-</form>
-<br/>
-<br/>
+</form></center>
 <center><b>In reality, You will never know where I live. I'll never answer you. I took the treasure with me and I'll never be found!</b></center>
 <h1>See you next time!</h1> 
-<br/>
 </section>
 
 
