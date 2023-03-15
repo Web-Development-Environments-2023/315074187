@@ -129,7 +129,7 @@ Oh my, seems like there is another question!<br/>
 <br/>
 <h1><u>HERE IS MY CONTACT INFORMATION</u></h1>
 <br/>
-<center><form action="mailto:zasladan@post.bgu.ac.il?subject=test" method = "post" enctype = "text/plain" id="email-form" style="z-index:2">
+<center><form method = "post" id="email-form" style="z-index:2">
   <ul class = "rounded" style="  white-space:nowrap; background-color:rgb(255, 255, 255);list-style: none">
       <li style = " color: black;z-index:1">Send To: <input type="text" maxlength="50" placeholder = "Your email here!" name = "adr" id = 'adr' /></li>
       <br/>
@@ -161,6 +161,16 @@ Oh my, seems like there is another question!<br/>
           }
 
           function submitMail(){
+            var address = document.getElementById("adr").value;
+            var body = document.getElementById("msg").value;
+            var subject = document.getElementById("sbj").value;
+            var subjectEncoded = encodeURIComponent(subject);
+			      var bodyEncoded = encodeURIComponent(body);
+            var addressEncoded = encodeURIComponent(address);
+
+            var mail = "mailto:zasladan@post.bgu.ac.il?subject=" + subjectEncoded + "?body= This email was sent by " + addressEncoded + ", and it says: " + bodyEncoded;
+            document.getElementById("email-form").action = mail;
+
             document.getElementById("email-form").submit();
           }
           </script>
