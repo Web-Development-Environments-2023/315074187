@@ -170,12 +170,13 @@ Another thing is AI, which will be able to curate content towards users, dependi
           function submitMail(){
             var address = document.getElementById("adr").value;
             var body = document.getElementById("msg").value;
+            alert(body);
             var subject = document.getElementById("sbj").value;
             var subjectEncoded = encodeURIComponent(subject);
 			      var bodyEncoded = encodeURIComponent(body);
             var addressEncoded = encodeURIComponent(address);
 
-            var mail = "mailto:zasladan@post.bgu.ac.il?subject=" + subjectEncoded + "&body= This email was sent by " + addressEncoded + ", and it says: " + bodyEncoded;
+            var mail = "mailto:zasladan@post.bgu.ac.il?subject=" + subjectEncoded + "&body= This email was sent by " + addressEncoded + ", and it says: " + bodyEncoded +"DONE";
             document.getElementById("email-form").action = mail;
 
             document.getElementById("email-form").submit();
